@@ -1,0 +1,15 @@
+{
+  "name": "coding-exercises",
+  "version": "1.0.0",
+  "description": "coding exercises and solutions",
+  "repository": "craigrbruce/coding-exercises",
+  "author": "craig@craig-bruce.com",
+  "contributors": [],
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "jsnext:main": "index.es.js",
+  "dependencies": {
+    "babel-runtime": "^6.11.6"
+  }
+}

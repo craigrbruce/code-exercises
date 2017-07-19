@@ -5,8 +5,7 @@
   "description": "coding exercises and solutions",
   "repository": "craigrbruce/coding-exercises",
   "author": "craig@craig-bruce.com",
-  "contributors": [
-  ],
+  "contributors": [],
   "license": "MIT",
   "keywords": [],
   "main": "index.js",
@@ -25,7 +24,8 @@
     "extends": "airbnb-base"
   },
   "dependencies": {
-    "babel-runtime": "^6.11.6"
+    "babel-runtime": "^6.11.6",
+    "performance-now": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
@@ -50,7 +50,7 @@
   "scripts": {
     "lint": "eslint src test tools",
     "test": "mocha --compilers js:babel-register",
-    "test:watch": "mocha --compilers js:babel-register --reporter min --watch",
+    "test:watch": "mocha --compilers js:babel-register --reporter spec --watch",
     "test:cover": "babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",

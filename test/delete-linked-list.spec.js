@@ -11,7 +11,7 @@ describe("delete node from linked list", () => {
   const node5 = { next: node4, data: 14 };
   const node6 = { next: node5, data: 7 };
 
-  it("should remove duplicates", () => {
+  it("should delete node from list", () => {
     const newHead = runner(deleteNode, [node6, 7]);
 
     const list = printLinkedList(newHead);

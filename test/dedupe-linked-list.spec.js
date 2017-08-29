@@ -1,5 +1,6 @@
 import { expect } from "chai";
-import { printList, dedupe } from "../src/dedupe-linked-list";
+import {  dedupe } from "../src/dedupe-linked-list";
+import { printLinkedList } from "../src/util";
 import runner from "./runner";
 
 describe("dedupe linked list", () => {
@@ -11,12 +12,12 @@ describe("dedupe linked list", () => {
   const node6 = { next: node5, data: 7 };
 
   it("should remove duplicates", () => {
-    let list = printList(node6);
+    let list = printLinkedList(node6);
     expect(list).to.equal("7 14 28 28 14 21");
 
-    dedupe(node6);
+    runner(dedupe, [node6]);
 
-    list = printList(node6);
+    list = printLinkedList(node6);
     expect(list).to.equal("7 14 28 21");
   });
 });

@@ -2,7 +2,6 @@ export function deleteNode(head, value) {
   let current = head;
   let previous = null;
 
-  console.log(head, value);
   while (current) {
     if (current.data === value) {
       break;

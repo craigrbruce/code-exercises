@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { bfs, dfs, Node } from "../src/x-first-search";
+import { bfs, dfs, dfs_rec, Node } from "../src/x-first-search";
 import runner from "./runner";
 
 var root = new Node(0);
@@ -19,7 +19,12 @@ describe("breadth first search", () => {
 
 describe("depth first search", () => {
   it("should traverse correctly", () => {
-    const actual = runner(dfs, [root]);
-    expect(actual).to.equal("0 1 3 4 2 5 6");
+    let expected = "0 1 3 4 2 5 6";
+
+    let actual = runner(dfs, [root]);
+    expect(actual).to.equal(expected);
+
+    actual = runner(dfs_rec, [root]);
+    expect(actual).to.equal(expected);
   });
 });

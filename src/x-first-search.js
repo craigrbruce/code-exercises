@@ -1,3 +1,6 @@
+/** 
+ * Breadth first - iterative. For wide trees.
+ */
 export function bfs(root) {
   var traversal = "";
   var queue = [];
@@ -17,6 +20,9 @@ export function bfs(root) {
   return traversal.trim();
 }
 
+/** 
+ * Depth first - iterative. For large, deep trees.
+ */
 export function dfs(root) {
   var traversal = "";
   var stack = [];
@@ -33,6 +39,26 @@ export function dfs(root) {
       stack.push(current.left);
     }
   }
+  return traversal.trim();
+}
+
+/** 
+ * Depth first - recursive. For small, deep trees.
+ */
+export function dfs_rec(root) {
+  let traversal = "";
+  const loop = current => {
+    traversal += `${current.value} `;
+    // note, the order of left and right to cater for
+    // our 'stack' which is actually the call-stack.
+    if (current.left) {
+      loop(current.left);
+    }
+    if (current.right) {
+      loop(current.right);
+    }
+  };
+  loop(root);
   return traversal.trim();
 }
 

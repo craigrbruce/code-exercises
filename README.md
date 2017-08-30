@@ -6,10 +6,3 @@ All tests are piped through a ["runner"](test.runner.js) .. which basically wrap
 
 The runner is called from a test like `runner(sut, [arg1, arg2, ...])`, i.e. passing a pointer for your function under test with an array of arguments to apply to it. 
 
-## The Exercises
-
-### Binary Search
-
-- [source](src/binary-search.js)
-- [test](test/binary-search.spec.js)
-

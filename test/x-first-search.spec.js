@@ -12,14 +12,14 @@ root.right.right = new Node(6);
 
 describe("breadth first search", () => {
   it("should traverse correctly", () => {
-    const actual = bfs(root);
+    const actual = runner(bfs, [root]);
     expect(actual).to.equal("0 1 2 3 4 5 6");
   });
 });
 
 describe("depth first search", () => {
   it("should traverse correctly", () => {
-    const actual = dfs(root);
+    const actual = runner(dfs, [root]);
     expect(actual).to.equal("0 1 3 4 2 5 6");
   });
 });
